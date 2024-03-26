@@ -1,6 +1,13 @@
 import React from 'react';
 
 function ProductCard({ item }) {
+
+
+  // Check if item or item.name is undefined
+  if (!item || !item.name) {
+    return <div>Error: Product name not available</div>;
+  }
+
   return (
     <div className="max-w-lg bg-green-900 border-[3px] border-orange-800 rounded-lg overflow-hidden shadow-lg">
       {/* Product Image */}

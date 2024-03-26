@@ -3,7 +3,15 @@
 import Head from 'next/head';
 
 export default function ProductPage({ product }) {
+
+  if (!product) {
+    return <div>Error: Product not available</div>;
+  }
+
+  // Destructure properties from product object
   const { name, description, starting_bid, image_key_1, image_key_2, image_key_3 } = product;
+
+  
 
   return (
     <div>
